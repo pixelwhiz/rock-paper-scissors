@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/purple_500"
     android:layout_gravity="center_vertical"
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
         android:layout_gravity="center_horizontal"
         android:text="asdasd" />
     
@@ -15,16 +16,22 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal" />
-    
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="232dp"
+        android:layout_height="30dp"
         android:layout_gravity="center_horizontal"
-        android:text="HELLO"/>
+        android:text="HELLO" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="238dp"
+        android:layout_height="172dp"
         android:text="qwqwe" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home" />
 
 </LinearLayout>
