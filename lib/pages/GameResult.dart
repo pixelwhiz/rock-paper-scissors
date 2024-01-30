@@ -4,6 +4,7 @@ import 'package:batukertasgunting/widgets/Button.dart';
 import 'package:flutter/material.dart';
 import 'package:batukertasgunting/utils/Provider.dart';
 import 'package:batukertasgunting/pages/Game.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GameResult extends StatefulWidget {
   GameResult(this.gameChoice, { Key? key }) : super(key: key);
@@ -61,6 +62,17 @@ class _GameResultState extends State<GameResult> {
     double btnWidth = MediaQuery.of(context).size.width / 2 - 40;
     return Scaffold(
       backgroundColor: Colors.white10,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text(
+          "20 Muhammad Daffa XII TKJ 1", style:
+        GoogleFonts.plusJakartaSans(
+          fontSize: 20.0,
+          color: Colors.white,
+        ),
+        ),
+        backgroundColor: Colors.lightBlue,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 34, horizontal: 8.0),
         child: Column(
@@ -70,15 +82,15 @@ class _GameResultState extends State<GameResult> {
             Container(
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 5.0),
-                borderRadius: BorderRadius.circular(8.0),
+                border: Border.all(color: Colors.white, width: 1.0),
+                borderRadius: BorderRadius.circular(5.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     "SCORE",
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       color: Colors.white,
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold,
@@ -107,7 +119,7 @@ class _GameResultState extends State<GameResult> {
                     ),
                     Text(
                       "VS",
-                      style: TextStyle(color: Colors.white, fontSize: 26.0),
+                      style: GoogleFonts.plusJakartaSans(color: Colors.white, fontSize: 26.0),
                     ),
                     AnimatedOpacity(
                       opacity: 1,
@@ -120,7 +132,7 @@ class _GameResultState extends State<GameResult> {
             ),
             Text(
               "${GameChoice.gameRules[widget.gameChoice.type]![compChoice]}",
-              style: TextStyle(
+              style: GoogleFonts.plusJakartaSans(
                 color: Colors.white,
                 fontSize: 36.0,
                 fontWeight: FontWeight.bold,
@@ -138,11 +150,14 @@ class _GameResultState extends State<GameResult> {
                 },
                 padding: EdgeInsets.all(16.0),
                 shape: StadiumBorder(
-                  side: BorderSide(color: Colors.white, width: 5.0),
+                  side: BorderSide(color: Colors.white, width: 1.0),
                 ),
                 child: Text(
                   "Play Again",
-                  style: TextStyle(color: Colors.white, fontSize: 24.0),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24.0
+                  ),
                 ),),
             ),
             Container(
@@ -151,11 +166,11 @@ class _GameResultState extends State<GameResult> {
                 onPressed: (){},
                 padding: EdgeInsets.all(16.0),
                 shape: StadiumBorder(
-                  side: BorderSide(color: Colors.white, width: 5.0),
+                  side: BorderSide(color: Colors.white, width: 1.0),
                 ),
                 child: Text(
                   "Rules",
-                  style: TextStyle(color: Colors.white, fontSize: 24.0),
+                  style: GoogleFonts.plusJakartaSans(color: Colors.white, fontSize: 24.0),
                 ),),
             ),
           ],

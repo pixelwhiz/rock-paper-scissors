@@ -2,6 +2,7 @@ import 'package:batukertasgunting/pages/GameResult.dart';
 import 'package:batukertasgunting/widgets/Button.dart';
 import 'package:flutter/material.dart';
 import 'package:batukertasgunting/utils/Provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Game extends StatefulWidget {
   const Game({Key? key}) : super(key: key);
@@ -16,6 +17,17 @@ class _GameState extends State<Game> {
     double btnWidth = MediaQuery.of(context).size.width / 2 - 40;
     return Scaffold(
       backgroundColor: Colors.white10,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text(
+          "20 Muhammad Daffa XII TKJ 1", style:
+          GoogleFonts.plusJakartaSans(
+            fontSize: 20.0,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.lightBlue,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 34, horizontal: 20),
         child: Column(
@@ -25,15 +37,15 @@ class _GameState extends State<Game> {
             Container(
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 5.0),
-                borderRadius: BorderRadius.circular(8.0),
+                border: Border.all(color: Colors.white, width: 1.0),
+                borderRadius: BorderRadius.circular(5.0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     "SCORE",
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       color: Colors.white,
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold,
@@ -41,7 +53,7 @@ class _GameState extends State<Game> {
                   ),
                   Text(
                     "${Provider.gameScore}",
-                    style: TextStyle(
+                    style: GoogleFonts.plusJakartaSans(
                       color: Colors.white,
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold,
@@ -112,11 +124,14 @@ class _GameState extends State<Game> {
                 onPressed: (){},
                 padding: EdgeInsets.all(16.0),
                 shape: StadiumBorder(
-                  side: BorderSide(color: Colors.white, width: 5.0),
+                  side: BorderSide(color: Colors.white, width: 1.0),
                 ),
                 child: Text(
                   "Rules",
-                  style: TextStyle(color: Colors.white, fontSize: 24.0),
+                  style: GoogleFonts.plusJakartaSans(
+                      color: Colors.white,
+                      fontSize: 24.0,
+                  ),
                 ),),
             ),
           ],
